@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+companion/logs/
+companion/models/*.tflite
+companion/models/*.xml
+companion/models/*.bin
+runs/
+datasets/
+*.pt
+.DS_Store
+Thumbs.db
