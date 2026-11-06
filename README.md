@@ -6,7 +6,7 @@ Hexacopter for precision farming. A Raspberry Pi 4 on the drone runs a YOLOv8n m
 
 <img src="docs/images/hexacopter_flight.jpg" width="300" align="right" alt="AgroneX hexacopter in flight">
 
-Final-year B.Tech project at XIM University, Bhubaneswar (2025). The thesis title was *Neerakrit: A Deep Learning-Driven Hexacopter for Precision Agricultural Pesticide Spraying*.
+B.Tech project at XIM University, Bhubaneswar (thesis submitted in April 2025). The thesis title was *Neerakrit: A Deep Learning-Driven Hexacopter for Precision Agricultural Pesticide Spraying*.
 
 ## Problem statement
 
