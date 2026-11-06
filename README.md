@@ -6,7 +6,7 @@ Hexacopter for precision farming. A Raspberry Pi 4 on the drone runs a YOLOv8n m
 
 <img src="docs/images/hexacopter_flight.jpg" width="300" align="right" alt="AgroneX hexacopter in flight">
 
-B.Tech project at XIM University, Bhubaneswar (thesis submitted in April 2025). The thesis title was *Neerakrit: A Deep Learning-Driven Hexacopter for Precision Agricultural Pesticide Spraying*.
+B.Tech project at XIM University, Bhubaneswar (2025). Won 1st place at the ICAIET 2025 project exhibition and 3rd prize at the ETIA 2025 Industrial Conclave Student Expo.
 
 ## Problem statement
 
@@ -124,7 +124,7 @@ The model weights are not in this repository because they were trained on our ow
 
 ## Results
 
-From the field tests and evaluation in the thesis:
+From our field tests and model evaluation:
 
 **Model** (drone test set):
 
@@ -176,7 +176,7 @@ Spray deposits were checked with water-sensitive paper during water-only spray t
 
 ## Team
 
-Ankit Choudhury,Ananya Verma, under the guidance of Dr. Devendra Kumar Yadav, School of Computer Science and Engineering, XIM University.
+Ankit Choudhury and Ananya Verma, under the guidance of Dr. Devendra Kumar Yadav, School of Computer Science and Engineering, XIM University.
 
 PlantDoc: D. Singh et al., *PlantDoc: A Dataset for Visual Plant Disease Detection*, CoDS-COMAD 2020.
 
