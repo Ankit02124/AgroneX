@@ -6,7 +6,7 @@ Hexacopter for precision farming. A Raspberry Pi 4 on the drone runs a YOLOv8n m
 
 <img src="docs/images/hexacopter_flight.jpg" width="300" align="right" alt="AgroneX hexacopter in flight">
 
-B.Tech project at XIM University, Bhubaneswar (2025). Won 1st place at the ICAIET 2025 project exhibition and 3rd prize at the ETIA 2025 Industrial Conclave Student Expo.
+B.Tech project at XIM University, Bhubaneswar (2025). The AgroneX team won 1st place at the ICAIET 2025 project exhibition and 3rd prize at the ETIA 2025 Industrial Conclave Student Expo.
 
 ## Problem statement
 
@@ -19,7 +19,7 @@ AgroneX does both on one drone, with the detection running on board. It flies a 
 ## Features
 
 - **On-board disease detection:** YOLOv8n on a Raspberry Pi 4, accelerated with an Intel Movidius Neural Compute Stick (about 10 frames per second).
-- **Hybrid transfer learning:** COCO -> PlantDoc -> 445 of our own drone images, to get a usable model from a small dataset.
+- **Hybrid transfer learning:** COCO -> PlantDoc (public dataset) -> 445 drone images we collected and labelled ourselves, to get a usable model from a small dataset.
 - **Detect and spray in one flight:** a detection above the confidence threshold, inside a GeoJSON spray zone and with a good GPS fix, switches the pump relay through MAVLink (`MAV_CMD_DO_SET_RELAY`).
 - **Autonomous missions:** Pixhawk 2.4.8 with ArduCopter, waypoint survey grids planned in Mission Planner.
 - **Safe by design:** the Pi never flies the drone. The pump is switched off if the MAVLink link drops or the GPS degrades, and the Pixhawk failsafes (RC loss, low battery, geofence) always take priority.
@@ -31,7 +31,7 @@ AgroneX does both on one drone, with the detection running on board. It flies a 
 | area | used |
 |---|---|
 | deep learning | YOLOv8n (Ultralytics, PyTorch), transfer learning, TensorFlow Lite, OpenVINO |
-| datasets | PlantDoc, custom drone dataset (Roboflow) |
+| datasets | PlantDoc (public), own drone dataset labelled in Roboflow |
 | edge computing | Raspberry Pi 4, Intel Movidius Neural Compute Stick, OpenCV, NumPy |
 | flight | Pixhawk 2.4.8, ArduPilot (ArduCopter), Mission Planner, MAVLink (pymavlink), GPS/GNSS |
 | hardware | carbon fibre hexacopter frame, BLDC motors, DShot ESCs, 4S LiPo, Radiolink AT10, SiK 915 MHz telemetry, diaphragm pump |
@@ -115,8 +115,8 @@ tests/                      pytest for the spray logic and detection post-proces
 |---|---|
 | model | YOLOv8n |
 | stage 1 | COCO pretrained weights |
-| stage 2 | PlantDoc, about 2,600 field images of 13 crops with healthy and diseased leaves labelled |
-| stage 3 | own drone images: 445 photos (3060x3060) labelled `healthy` / `disease`, split 356 / 45 / 44 |
+| stage 2 | PlantDoc, an existing public dataset: about 2,600 field images of 13 crops with healthy and diseased leaves labelled |
+| stage 3 | drone images collected and labelled by Ankit Choudhury and Ananya Verma: 445 photos (3060x3060), classes `healthy` / `disease`, split 356 / 45 / 44 |
 | input size | 640x640 |
 | on the drone | TensorFlow Lite on the Pi CPU, or OpenVINO FP16 on the Movidius stick |
 
@@ -176,7 +176,7 @@ Spray deposits were checked with water-sensitive paper during water-only spray t
 
 ## Team
 
-Ankit Choudhury and Ananya Verma, under the guidance of Dr. Devendra Kumar Yadav, School of Computer Science and Engineering, XIM University.
+Built by Ankit Choudhury and Ananya Verma, under the guidance of Dr. Devendra Kumar Yadav, School of Computer Science and Engineering, XIM University. The competition entries were made by the larger AgroneX team.
 
 PlantDoc: D. Singh et al., *PlantDoc: A Dataset for Visual Plant Disease Detection*, CoDS-COMAD 2020.
 

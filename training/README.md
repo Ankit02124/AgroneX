@@ -7,14 +7,14 @@ The drone dataset has only 445 images. Training YOLOv8n on that alone overfits q
 | stage | data | what it learns |
 |---|---|---|
 | 1 | COCO (Ultralytics `yolov8n.pt`) | general shapes, edges, textures |
-| 2 | [PlantDoc](https://github.com/pratikkayal/PlantDoc-Dataset), about 2,600 field photos of 13 crops | what diseased and healthy leaves look like |
-| 3 | own drone dataset, 445 images (3060x3060), classes `healthy` / `disease` | the top-down view, distance and lighting from the drone |
+| 2 | [PlantDoc](https://github.com/pratikkayal/PlantDoc-Dataset) (existing public dataset), about 2,600 field photos of 13 crops | what diseased and healthy leaves look like |
+| 3 | our drone dataset, 445 images (3060x3060) collected and labelled by us, classes `healthy` / `disease` | the top-down view, distance and lighting from the drone |
 
 Stage 3 starts from the stage 2 weights with a 10x lower learning rate, so it adjusts the plant features instead of overwriting them.
 
 ## Drone dataset
 
-Taken with the hexacopter over crops, annotated in Roboflow with bounding boxes. Split: 356 train, 45 validation, 44 test. Images are resized to 640x640 with letterboxing, and training uses mosaic, flips, rotation and brightness/colour augmentation because the dataset is small and lighting changes a lot between flights.
+Collected with the hexacopter over crops and labelled with bounding boxes in Roboflow by Ankit Choudhury and Ananya Verma. Split: 356 train, 45 validation, 44 test. Images are resized to 640x640 with letterboxing, and training uses mosaic, flips, rotation and brightness/colour augmentation because the dataset is small and lighting changes a lot between flights.
 
 ![drone dataset](../docs/images/drone_dataset.png)
 
