@@ -176,7 +176,7 @@ Spray deposits were checked with water-sensitive paper during water-only spray t
 
 ## Team
 
-Ankit Choudhury, Abhisekh Dash, Suraj Maharana, Alluri Pranay Varma and Vansh Poddar, under the guidance of Dr. Devendra Kumar Yadav, School of Computer Science and Engineering, XIM University.
+Ankit Choudhury,Ananya Verma, under the guidance of Dr. Devendra Kumar Yadav, School of Computer Science and Engineering, XIM University.
 
 PlantDoc: D. Singh et al., *PlantDoc: A Dataset for Visual Plant Disease Detection*, CoDS-COMAD 2020.
 
