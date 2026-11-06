@@ -1,0 +1,27 @@
+# AgroneX companion computer settings (Raspberry Pi 4)
+
+mavlink:
+  port: /dev/serial0        # Pi UART wired to Pixhawk TELEM2
+  baud: 57600               # must match SERIAL2_BAUD on the Pixhawk
+
+camera:
+  device: 0                 # 1080p Arducam over USB (/dev/video0)
+  width: 1920
+  height: 1080
+
+model:
+  path: models/agronex_yolov8n.tflite   # or models/agronex_yolov8n.xml with backend: openvino
+  backend: tflite           # tflite (CPU) or openvino (Movidius Neural Compute Stick)
+  names: [healthy, disease]
+  imgsz: 640
+  conf: 0.5                 # minimum confidence for a 'disease' box to trigger a spray
+  iou: 0.5
+
+spray:
+  relay: 0                  # RELAY1 on the Pixhawk (AUX OUT wired to the pump driver)
+  duration_s: 1.5           # pump burst per trigger, extended while disease keeps being seen
+  max_hdop: 2.0             # no spraying with a poor GPS position
+  zones: spray_zones.geojson
+
+active_modes: [AUTO, GUIDED] # only look and spray during missions, never in manual flight
+log_dir: logs
