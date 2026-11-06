@@ -1,0 +1,9 @@
+# Custom drone dataset: 445 images (3060x3060) taken from the hexacopter over
+# crops, labelled with two classes. Split used: 356 train / 45 val / 44 test.
+path: ../datasets/agronex-drone
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: healthy
+  1: disease

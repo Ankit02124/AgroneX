@@ -1,0 +1,39 @@
+# PlantDoc (Singh et al., 2020): ~2,600 field images of 13 crop species with
+# bounding boxes for 30 classes (healthy leaves and diseases).
+# Get it in YOLO format from Roboflow Universe or Kaggle and point `path` at it.
+# The class list below is the one in the YOLO export; check it against your copy.
+path: ../datasets/plantdoc
+train: train/images
+val: valid/images
+test: test/images
+names:
+  0: Apple Scab Leaf
+  1: Apple leaf
+  2: Apple rust leaf
+  3: Bell_pepper leaf
+  4: Bell_pepper leaf spot
+  5: Blueberry leaf
+  6: Cherry leaf
+  7: Corn Gray leaf spot
+  8: Corn leaf blight
+  9: Corn rust leaf
+  10: Peach leaf
+  11: Potato leaf
+  12: Potato leaf early blight
+  13: Potato leaf late blight
+  14: Raspberry leaf
+  15: Soyabean leaf
+  16: Soybean leaf
+  17: Squash Powdery mildew leaf
+  18: Strawberry leaf
+  19: Tomato Early blight leaf
+  20: Tomato Septoria leaf spot
+  21: Tomato leaf
+  22: Tomato leaf bacterial spot
+  23: Tomato leaf late blight
+  24: Tomato leaf mosaic virus
+  25: Tomato leaf yellow virus
+  26: Tomato mold leaf
+  27: Tomato two spotted spider mites leaf
+  28: grape leaf
+  29: grape leaf black rot
